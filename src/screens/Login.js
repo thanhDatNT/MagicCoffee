@@ -47,7 +47,10 @@ export default function Login({navigation}) {
   };
   const checkCredential = () => {
     console.log(user);
-    if (name === user.Name && password === user.Password) {
+    if(user == null){
+      Alert.alert('Login failed', 'Your account does not exist!');
+    }
+    else if (name === user.Name && password === user.Password) {
       HandleNotification();
       navigation.navigate('Intro');
     } else {

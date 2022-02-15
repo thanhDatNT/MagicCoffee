@@ -70,7 +70,8 @@ function MainScreen() {
         activeTintColor: '#A92F01',
         inactiveTintColor: '#777777',
         labelStyle: {fontSize: 15},
-      }}>
+      }}
+      elevation={4}>
       <bottomTab.Screen
         name={'Home'}
         component={Home}

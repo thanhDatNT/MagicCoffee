@@ -115,6 +115,7 @@ export default function Order() {
         if (len > 0) {
           for (var i = 0; i < len; i++) {
             historyInvoice.push(results.rows.item(i));
+            console.log(results.rows.item(i));
           }
           setHistory(historyInvoice);
         }
@@ -146,8 +147,8 @@ export default function Order() {
               <TouchableOpacity
                 style={styles.btn_ok_button}
                 onPress={() => {
-                  setShowModal(false);
                   setRemove(true);
+                  setShowModal(false);
                 }}>
                 <Text style={styles.text}>OK</Text>
               </TouchableOpacity>
@@ -203,7 +204,7 @@ export default function Order() {
           data={history}
           renderItem={({item}) => (
             <View style={styles.items}>
-              <Image style={styles.photo} source={{uri: `${item.Photo}`}} />
+              <Image style={styles.photo} source={{uri: `${item.Image}`}} />
               <View style={styles.content}>
                 <Text style={styles.text_name}>{item.Name}</Text>
                 <Text>x{item.Quantity}</Text>

@@ -28,7 +28,7 @@ export default function Home({navigation}) {
     }
   };
   return (
-    <View>
+    <View style={styles.main_container}>
       <View style={styles.top_view}>
         <Text>Hello!</Text>
         <Text style={styles.text}>{userName}</Text>
@@ -61,17 +61,22 @@ export default function Home({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  main_container:{
+    flex: 1,
+    flexDirection: 'column'
+  },
   container: {
     backgroundColor: '#A92F01',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     padding: 12,
+    flex: 1
   },
   item: {
     backgroundColor: '#ffffff',
     borderRadius: 10,
     margin: 20,
-    width: 170,
+    width: 150,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
